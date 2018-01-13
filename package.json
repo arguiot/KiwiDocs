@@ -1,0 +1,32 @@
+{
+    "name": "KiwiDocs",
+    "version": "v0.0.1",
+    "description": "🥝 The open-source documentation system.",
+    "main": "dist/js/main.js",
+    "directories": {
+        "doc": "docs"
+    },
+    "scripts": {
+        "run": "npm test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/arguiot/KiwiDocs.git"
+    },
+    "keywords": [
+        "documentation",
+        "docs",
+        "kiwi",
+        "kiwidocs",
+        "displayjs",
+        "javascript"
+    ],
+    "author": "Arthur Guiot",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/arguiot/KiwiDocs/issues"
+    },
+    "homepage": "https://kiwidocs.js.org",
+    "devDependencies": {},
+    "dependencies": {}
+}

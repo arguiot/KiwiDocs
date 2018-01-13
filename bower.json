@@ -1,0 +1,25 @@
+{
+  "name": "KiwiDocs",
+  "description": "🥝 The open-source documentation system.",
+  "main": "dist/js/main.js",
+  "authors": [
+    "Arthur Guiot"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "documentation",
+	"docs",
+	"kiwi",
+	"kiwidocs",
+	"displayjs",
+    "javascript"
+  ],
+  "homepage": "https://github.com/arguiot/KiwiDocs",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
