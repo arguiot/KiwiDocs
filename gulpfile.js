@@ -4,8 +4,9 @@ uglify = require("gulp-uglify");
 babel = require("gulp-babel");
 babili = require("gulp-babili");
 rigger = require("gulp-rigger");
+
 gulp.task("copy", function () {
-	gulp.src("src/html/*")
+	gulp.src("src/html/*.!(png)")
     .pipe(gulp.dest("dist/"));
 });
 

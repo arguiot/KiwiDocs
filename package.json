@@ -61,7 +61,6 @@
 								"gulp": "^3.9.1",
 								"gulp-babel": "^7.0.0",
 								"gulp-babili": "^0.1.4",
-								"gulp-favicons": "^2.2.7",
 								"gulp-rename": "^1.2.2",
 								"gulp-rigger": "^0.5.8",
 								"gulp-uglify": "^3.0.0",
