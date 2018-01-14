@@ -40,4 +40,4 @@ function listener() {
 }
 const urlparser = document.createElement('a')
 urlparser.href = window.location
-getPage("https://github.com/arguiot/DisplayJS/wiki/" + urlparser.hash.split("#")[1])
+getPage("https://github.com/arguiot/EyeJS/wiki/" + urlparser.hash.split("#")[1])
