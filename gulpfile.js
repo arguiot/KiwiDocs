@@ -6,7 +6,7 @@ babili = require("gulp-babili");
 rigger = require("gulp-rigger");
 
 gulp.task("copy", function () {
-	gulp.src("src/html/*.!(png|json)")
+	gulp.src("src/html/*.!(png|json|ico)")
     .pipe(gulp.dest("dist/"));
 });
 
