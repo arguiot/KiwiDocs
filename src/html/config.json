@@ -1,4 +1,7 @@
-{
-	"type": "wiki",
-	"url": "https://github.com/arguiot/Glottologist/wiki"
-}
+[{
+	"type": "markdown",
+	"paths": {
+		"css": "doc/css.md",
+		"extend": "doc/extend.md"
+	}
+}]
