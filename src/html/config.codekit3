@@ -477,7 +477,7 @@
 	"displayValue": "KiwiDocs - dev",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "\/apple-touch-icon.png",
-	"lastBuiltDate": 537883049
+	"lastBuiltDate": 537969091
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -1870,7 +1870,7 @@
 	"externalServerAddress": "http:\/\/localhost:8888",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
-	"jsCheckerReservedNamesString": "DisplayJS, showdown",
+	"jsCheckerReservedNamesString": "DisplayJS, showdown, ga",
 	"jsHintFlags2": {
 		"asi": {
 			"active": 0,
