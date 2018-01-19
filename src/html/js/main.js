@@ -104,7 +104,7 @@ function listener() {
             if (dataPaths == []) {
                 window.location = `#${e.target.tagName.toLowerCase() != "a" ? e.target.parentNode.href.split("/").slice(-1)[0] : e.target.href.split("/").slice(-1)[0]}`
             } else {
-                const hashtag = Object.values(dataPaths).indexOf(e.target.pathname.slice(1))
+                const hashtag = Object.keys(dataPaths).indexOf(e.target.innerHTML)
                 window.location = `#${hashtag}`
                 load(Object.values(dataPaths)[hashtag])
             }
