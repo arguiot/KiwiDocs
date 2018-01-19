@@ -1,0 +1,1 @@
+const $ = new DisplayJS(window);
