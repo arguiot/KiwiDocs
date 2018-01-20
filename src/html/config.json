@@ -1,9 +1,6 @@
 [{
-	"type": "markdown",
-	"paths": {
-		"css": "doc/css.md",
-		"extend": "doc/extend.md"
-	},
-	"logo": "https://camo.githubusercontent.com/7b2e0fd29c839b0a4f74978e3e3e6032f677aed8/68747470733a2f2f676c6f74746f6c6f676973742e6a732e6f72672f696d672f4c6f676f2e737667",
+	"type": "github",
+	"url": "https://github.com/arguiot/KiwiDocs/wiki",
+	"logo": "https://raw.githubusercontent.com/arguiot/KiwiDocs/master/assets/logo.svg",
 	"copyright": "Arthur Guiot"
 }]

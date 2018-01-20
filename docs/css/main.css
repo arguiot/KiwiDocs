@@ -165,10 +165,10 @@ article {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     background: rgba(51, 51, 51, 0.8);
     color: white;
-    height: 500px;
+    /* height: 500px; */
 }
 
 .feature {
@@ -176,6 +176,8 @@ article {
     text-align: center;
     padding: 20px;
     margin-left: 20px;
+	margin-top: 80px;
+	margin-bottom: 80px;
 }
 
 .feature>.name {
@@ -183,7 +185,9 @@ article {
     font-weight: 500;
     padding: 20px;
 }
-
+.feature>.content {
+	text-align: justify;
+}
 .flex-grid {
     display: flex;
     flex-direction: row;
@@ -192,11 +196,17 @@ article {
     align-items: center;
     height: 300px;
 }
-
+.fa {
+	font-size: 64px !important;
+}
 .long {
     width: 60vw;
 }
-
+.centerify {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .short {
     width: 40vw;
 }
@@ -221,7 +231,10 @@ article {
 .gist-meta {
     display: none;
 }
-
+.img-long {
+	width: 500px;
+	border-radius: 2px;
+}
 .gist {
     width: 500px;
 }
