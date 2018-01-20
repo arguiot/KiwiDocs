@@ -196,8 +196,24 @@ article {
     align-items: center;
     height: 300px;
 }
+.menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 50vw;
+	margin-left: 8.5vw;
+}
+.item {
+	padding: 20px;
+}
 .fa {
 	font-size: 64px !important;
+	color: white;
+	transition: all 100ms ease-in-out;
+}
+.fa:hover {
+	transform: scale(1.2)
 }
 .long {
     width: 60vw;
