@@ -1,6 +1,5 @@
 <div align="center"><img src="https://kiwidocs.js.org/img/logo.svg" width="300">
-<br>
-<h1>KiwiDocs</h1><br>
+<br><h1>KiwiDocs</h1><br>
 🥝 The open-source documentation system.
 
 </div>
@@ -10,7 +9,7 @@
 Type this command in your terminal.
 
 ```bash
-git clone https://github.com/arguiot/KiwiDocs && cd KiwiDocs && npm start
+git clone https://github.com/arguiot/KiwiDocs && cd KiwiDocs && npm i && npm start
 ```
 
 # The full docs can be found [here](https://github.com/arguiot/KiwiDocs/wiki)
