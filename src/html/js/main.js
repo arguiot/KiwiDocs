@@ -10,7 +10,7 @@ let dataPaths = []
 
 function load(url = null) {
     $.html(".title", 'Loading...')
-    $.html(".sidebar", '<ul><li>Loading...</li></ul>')
+    // $.html(".sidebar", '<ul><li>Loading...</li></ul>')
     $.html(".content", '<div align="center">Loading...</div>')
     if (configLoaded === false) {
         fetch("config.json")
@@ -19,11 +19,11 @@ function load(url = null) {
                 data = data[0]
                 config = data;
                 configLoaded = true;
-				$.html("head>title", data.title)
+                $.html("head>title", data.title)
                 if (data.type == "wiki" || data.type == "github") {
                     const urlparser = document.createElement('a')
                     urlparser.href = window.location
-                    load(data.url + "/" + urlparser.hash.split("#")[1])
+                    load(`${data.url}/${urlparser.hash.split("#")[1]}`)
                     side(data.logo, data.copyright)
                 } else {
                     $.html(".sidebar", "<ul></ul>")
@@ -55,13 +55,15 @@ function load(url = null) {
             })
     } else {
         if (/github.com/.test(url)) {
-            fetch(url, {
-                    mode: 'cors'
-                })
+            fetch("https://cors-anywhere.herokuapp.com/" + url, {
+				header: new Headers({
+					"Accept": "*"
+				})
+			})
                 .then(config => config.text())
-                .then(config => {
+                .then(data => {
                     const parser = new DOMParser();
-                    const configEl = parser.parseFromString(config, "text/html");
+                    const configEl = parser.parseFromString(data, "text/html");
                     const els = configEl.querySelectorAll(".markdown-body")
                     $.html(".title", configEl.querySelector(".gh-header-title").innerHTML)
                     $.html(".sidebar", els[0].innerHTML)
@@ -84,7 +86,9 @@ function load(url = null) {
 }
 
 function side(url, copy) {
-    if (!$.single(".sidebar").contains($.single("center > .img"))) {
+
+    if (url != undefined) {
+		console.log()
         $.single(".sidebar").innerHTML = `
 		<center>
 			<img src="${url}" alt="Logo" class="img">
@@ -96,14 +100,17 @@ function side(url, copy) {
 		</center>
 		`
     }
+	listener()
 }
 
 function listener() {
     $.all(".sidebar ul>li>a", el => {
         $.on(el, "click", e => {
             e.preventDefault()
-            if (dataPaths == []) {
+            if (!config.hasOwnProperty("paths")) {
+
                 window.location = `#${e.target.tagName.toLowerCase() != "a" ? e.target.parentNode.href.split("/").slice(-1)[0] : e.target.href.split("/").slice(-1)[0]}`
+				load(e.target.tagName.toLowerCase() != "a" ? e.target.parentNode.href : e.target.href)
             } else {
                 const hashtag = Object.keys(dataPaths).indexOf(e.target.innerHTML)
                 window.location = `#${hashtag}`
