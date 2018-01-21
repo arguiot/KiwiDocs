@@ -23,10 +23,15 @@ inquirer.prompt({
             type: 'input',
             name: 'copyright',
             message: "What's your name? (for copyright)"
+        }, {
+            type: 'input',
+            name: 'title',
+            message: "What's your project name? (for the page title)"
         }]).then(b => {
             array.url = b.url
             array.logo = b.logo
             array.copyright = b.copyright
+			array.title = b.title
             dealWithIt([array])
         })
     } else {
@@ -43,10 +48,15 @@ inquirer.prompt({
             type: 'input',
             name: 'copyright',
             message: "What's your name? (for copyright)"
+        }, {
+            type: 'input',
+            name: 'title',
+            message: "What's your project name? (for the page title)"
         }]).then(b => {
             array.paths = b.paths
             array.logo = b.logo
             array.copyright = b.copyright
+			array.title = b.title
             dealWithIt([array])
         })
     }

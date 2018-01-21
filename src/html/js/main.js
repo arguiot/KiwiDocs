@@ -19,6 +19,7 @@ function load(url = null) {
                 data = data[0]
                 config = data;
                 configLoaded = true;
+				$.html("head>title", data.title)
                 if (data.type == "wiki" || data.type == "github") {
                     const urlparser = document.createElement('a')
                     urlparser.href = window.location
