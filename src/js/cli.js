@@ -27,12 +27,28 @@ inquirer.prompt({
             type: 'input',
             name: 'title',
             message: "What's your project name? (for the page title)"
-        }]).then(b => {
+        }, {
+		    type: 'confirm',
+		    name: 'analytics',
+		    message: 'Do you have a Google Analytics ID?',
+		    default: false
+		}]).then(b => {
             array.url = b.url
             array.logo = b.logo
             array.copyright = b.copyright
 			array.title = b.title
-            dealWithIt([array])
+			if (b.analytics === true) {
+				inquirer.prompt({
+					type: 'input',
+		            name: 'id',
+		            message: "What's your Google Analytics ID (UA-XXXXXX-X)?"
+				}).then(c => {
+					array.analytics = c.id
+					dealWithIt([array])
+				})
+			} else {
+				dealWithIt([array])
+			}
         })
     } else {
         array.type = "markdown"
@@ -52,12 +68,28 @@ inquirer.prompt({
             type: 'input',
             name: 'title',
             message: "What's your project name? (for the page title)"
-        }]).then(b => {
+        }, {
+		    type: 'confirm',
+		    name: 'analytics',
+		    message: 'Do you have a Google Analytics ID?',
+		    default: false
+		}]).then(b => {
             array.paths = b.paths
             array.logo = b.logo
             array.copyright = b.copyright
 			array.title = b.title
-            dealWithIt([array])
+			if (b.analytics === true) {
+				inquirer.prompt({
+					type: 'input',
+		            name: 'id',
+		            message: "What's your Google Analytics ID (UA-XXXXXX-X)?"
+				}).then(c => {
+					array.analytics = c.id
+					dealWithIt([array])
+				})
+			} else {
+				dealWithIt([array])
+			}
         })
     }
 })
